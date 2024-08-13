@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-back-button slot="end" text="Geri Dön"></ion-back-button>
+    <ion-title>{{arac.model}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-img [src]="arac.resimUrl"></ion-img>
+    <ion-card-header>
+      <ion-card-subtitle>Sahibinden</ion-card-subtitle>
+      <ion-card-title>{{arac.model}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Araçlarımız herkesin ömründe bir kez bile olsa kullanmak isteyeceği araçlardır.Günlük veya haftalık kiralanır,saatlik için aramayınız.
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-item  class="ion-activated" *ngFor="let detay of arac.detay">
+      <ion-icon slot="start" name="caret-forward-outline"></ion-icon>
+      <ion-label>{{detay}}</ion-label>
+    </ion-item>
+
+  </ion-card>
+  <ion-button expand="full" color="success">
+    Kirala
+  </ion-button>
+</ion-content>

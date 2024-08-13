@@ -1,0 +1,19 @@
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-item>
+      <ion-input [(ngModel)]="userData!.email" label="E-Posta" type="text" placeholder="example@hotmail.com" labelPlacement="stacked"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input [(ngModel)]="userData!.password" label="Şifre" type="password"  labelPlacement="stacked"></ion-input>
+    </ion-item>
+    <br>
+    <ion-button (click)="giris()" color="dark" fill="solid">
+      <ion-icon slot="start" name="chevron-forward-circle-outline"></ion-icon>
+      Giriş Yap
+    </ion-button>
+    <ion-button  fill="solid" [routerLink]="['/signup']"  >
+      Kayıt Ol
+    </ion-button>
+  </ion-list>
+  
+</ion-content>
